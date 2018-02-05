@@ -28,4 +28,12 @@
     <WarningsAsErrors />
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Aurochses.Data.EntityFrameworkCore" Version="2.0.4" />
+    <PackageReference Include="Aurochses.Module.Autofac.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Aurochses.Module.Business.Autofac.EntityFrameworkCore" Version="2.0.0" />
+    <PackageReference Include="Aurochses.Module.Data.Autofac" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.1" />
+  </ItemGroup>
+
 </Project>
