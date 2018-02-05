@@ -7,7 +7,7 @@ namespace Aurochses.Module.Address.Data.Contract
     /// Interface IAddressUnitOfWork
     /// </summary>
     /// <seealso cref="Aurochses.Data.IUnitOfWork" />
-    public interface IAddressUnitOfWork
+    public interface IAddressUnitOfWork : IUnitOfWork
     {
         /// <summary>
         /// Gets the address repository.

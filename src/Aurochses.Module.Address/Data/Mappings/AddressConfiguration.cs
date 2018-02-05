@@ -1,5 +1,6 @@
 ﻿using System;
 using Aurochses.Data.EntityFrameworkCore;
+using Aurochses.Data.Extensions.MsSql;
 using Aurochses.Module.Address.Data.Contract;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -37,6 +38,9 @@ namespace Aurochses.Module.Address.Data.Mappings
 
             // Primary Key
             entityTypeBuilder.HasKey(x => x.Id);
+
+            // Properties
+            entityTypeBuilder.Property(x => x.Id).HasDefaultValueSql(Functions.NewSequentialId);
         }
     }
 }
