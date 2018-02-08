@@ -10,11 +10,7 @@ namespace Aurochses.Module.Address.Data.Mappings
     /// <summary>
     /// Class AddressConfiguration.
     /// </summary>
-    /// <seealso>
-    ///     <cref>
-    ///         Aurochses.Data.EntityFrameworkCore.EntityTypeConfiguration{Aurochses.Module.Address.Data.Contract.AddressEntity, System.Guid}
-    ///     </cref>
-    /// </seealso>
+    /// <seealso cref="Aurochses.Data.EntityFrameworkCore.EntityTypeConfiguration{AddressEntity, Guid}" />
     public class AddressConfiguration : EntityTypeConfiguration<AddressEntity, Guid>
     {
         /// <summary>
