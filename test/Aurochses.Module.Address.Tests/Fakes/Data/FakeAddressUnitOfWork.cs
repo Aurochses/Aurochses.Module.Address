@@ -8,8 +8,15 @@ namespace Aurochses.Module.Address.Tests.Fakes.Data
 {
     public class FakeAddressUnitOfWork : AddressUnitOfWork
     {
-        public FakeAddressUnitOfWork(Func<DbContext, IRepository<AddressEntity, Guid>> addressRepository, DbContextOptions dbContextOptions, string schemaName)
-            : base(addressRepository, dbContextOptions, schemaName)
+        public FakeAddressUnitOfWork(
+            Func<DbContext, IRepository<AddressEntity, Guid>> addressRepository,
+            Func<DbContext, IRepository<CityEntity, int>> cityRepository,
+            Func<DbContext, IRepository<CountryEntity, int>> countryRepository,
+            Func<DbContext, IRepository<CountyEntity, int>> countyRepository,
+            Func<DbContext, IRepository<StateEntity, int>> stateRepository,
+            DbContextOptions dbContextOptions,
+            string schemaName)
+            : base(addressRepository, cityRepository, countryRepository, countyRepository, stateRepository, dbContextOptions, schemaName)
         {
 
         }

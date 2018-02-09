@@ -17,6 +17,10 @@ namespace Aurochses.Module.Address.Tests.Data
 
             _addressUnitOfWork = new AddressUnitOfWork(
                 dbContext => new Repository<AddressEntity, Guid>(dbContext),
+                dbContext => new Repository<CityEntity, int>(dbContext),
+                dbContext => new Repository<CountryEntity, int>(dbContext),
+                dbContext => new Repository<CountyEntity, int>(dbContext),
+                dbContext => new Repository<StateEntity, int>(dbContext),
                 dbContextOptionsBuilder.Options,
                 "dbo"
             );

@@ -21,6 +21,10 @@ namespace Aurochses.Module.Address.Data
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<Repository<AddressEntity, Guid>>().As<IRepository<AddressEntity, Guid>>().InstancePerLifetimeScope();
+            builder.RegisterType<Repository<CityEntity, int>>().As<IRepository<CityEntity, int>>().InstancePerLifetimeScope();
+            builder.RegisterType<Repository<CountryEntity, int>>().As<IRepository<CountryEntity, int>>().InstancePerLifetimeScope();
+            builder.RegisterType<Repository<CountyEntity, int>>().As<IRepository<CountyEntity, int>>().InstancePerLifetimeScope();
+            builder.RegisterType<Repository<StateEntity, int>>().As<IRepository<StateEntity, int>>().InstancePerLifetimeScope();
         }
     }
 }

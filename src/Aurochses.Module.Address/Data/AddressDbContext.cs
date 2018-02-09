@@ -36,6 +36,10 @@ namespace Aurochses.Module.Address.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.AddConfiguration(new AddressConfiguration(SchemaName));
+            modelBuilder.AddConfiguration(new CityConfiguration(SchemaName));
+            modelBuilder.AddConfiguration(new CountryConfiguration(SchemaName));
+            modelBuilder.AddConfiguration(new CountyConfiguration(SchemaName));
+            modelBuilder.AddConfiguration(new StateConfiguration(SchemaName));
         }
     }
 }
